@@ -95,9 +95,6 @@ const WA_BASE = `https://wa.me/${WA_NUMBER}`;
           <button type="submit" id="submit-btn" class="btn-submit">
             Enviar reserva por WhatsApp
           </button>
-
-          <p id="form-status" class="form-status" aria-live="polite"></p>
-
         </form>
       </div>
 
@@ -201,14 +198,6 @@ const WA_BASE = `https://wa.me/${WA_NUMBER}`;
     margin-top: 1px;
   }
   .btn-submit:hover { background-color: var(--color-primary-dark); }
-
-  .form-status {
-    font-size: 0.75rem;
-    text-align: center;
-    padding-top: 0.75rem;
-    color: var(--color-on-surface-muted);
-    min-height: 1.5rem;
-  }
 
   .info-row { display: flex; align-items: flex-start; gap: 1rem; }
   .info-icon { flex-shrink: 0; color: var(--color-primary); margin-top: 0.1rem; }
