@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '');
 ---
 
 <section
@@ -9,7 +9,7 @@ const base = import.meta.env.BASE_URL;
 >
   <div class="hero-bg absolute inset-0 z-0">
     <img
-      src={`${base}assets/images/fondo.jpg`}
+      src={`${base}/assets/images/fondo.jpg`}
       alt=""
       loading="eager"
       class="w-full h-full object-cover"
