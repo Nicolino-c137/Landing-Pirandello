@@ -1,0 +1,150 @@
+---
+import { menuItems } from '../data/menu';
+const base = import.meta.env.BASE_URL;
+---
+
+<section id="menu" class="py-24" style="background-color: var(--color-surface-low)">
+  <div class="section-container">
+
+    <div class="text-center mb-10 fade-in">
+      <p class="text-xs uppercase tracking-[0.3em] mb-4" style="color: var(--color-primary)">Lo mejor de la casa</p>
+      <h2 class="heading-xl" style="margin-bottom: 1.5rem; color: var(--color-on-surface)">Nuestros platos</h2>
+      <div class="flex justify-center mt-6">
+        <div class="w-25 h-px mx-auto mt-6" style="margin-bottom:3.5rem; background-color: var(--color-primary)"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-start">
+        {menuItems.map((item, i) => (
+          <article class={`menu-card group fade-in${i % 2 === 1 ? ' menu-card--offset' : ''}`}>
+            <div class="menu-img-wrap">
+              <img
+                src={`${base}${item.imagen}`}
+                alt={item.nombre}
+                loading="lazy"
+                width="400"
+                height="533"
+                class="menu-img"
+              />
+            </div>
+            <div class="menu-text">
+              <div class="menu-line" aria-hidden="true"></div>
+              <h3 class="menu-title">{item.nombre}</h3>
+              <p class="menu-desc">{item.descripcion}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="text-center mt-14 fade-in" style="margin-top: 3.5rem;">
+        <a
+          href="https://menu.fu.do/pirandellolomos/qr-menu"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-outline"
+        >
+          Ver menú completo
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .menu-outer {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .menu-outer { padding-left: 3.5rem; padding-right: 3.5rem; }
+  }
+
+  @media (min-width: 1024px) {
+    .menu-outer { padding-left: 8.5rem; padding-right: 5.5rem; }
+  }
+
+  .menu-card--offset {
+    margin-top: 2.5rem;
+  }
+
+  .menu-img-wrap {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.4), 0 8px 10px -6px rgba(0,0,0,0.3);
+  }
+
+  .menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 0.5s ease;
+    filter: brightness(0.82) saturate(0.85);
+  }
+
+  .menu-card:hover .menu-img {
+    transform: scale(1.06);
+    filter: brightness(1) saturate(1);
+  }
+
+  .menu-text {
+    padding: 0.9rem 0.1rem 0;
+  }
+
+  .menu-line {
+    width: 1.75rem;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin-bottom: 0.65rem;
+    transition: width 0.4s ease;
+  }
+
+  .menu-card:hover .menu-line {
+    width: 3.5rem;
+  }
+
+  .menu-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+    color: var(--color-on-surface);
+    line-height: 1.3;
+  }
+
+  .menu-desc {
+    font-size: 0.72rem;
+    line-height: 1.65;
+    color: var(--color-on-surface-muted);
+    margin-top: 0.4rem;
+    max-height: 10;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition:
+      max-height 0.45s ease,
+      opacity 0.35s ease 0.05s,
+      transform 0.35s ease 0.05s;
+  }
+
+  .menu-card:hover .menu-desc {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 767px) {
+    .menu-desc {
+      opacity: 1;
+      max-height: none;
+      transform: translateY(0);
+    }
+  }
+</style>

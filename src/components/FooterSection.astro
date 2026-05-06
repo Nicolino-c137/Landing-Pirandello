@@ -1,0 +1,199 @@
+---
+const base = import.meta.env.BASE_URL;
+const year = new Date().getFullYear();
+
+const MAP_SRC = "https://www.google.com/maps?q=-31.5278743,-68.5689461&hl=es&z=17&output=embed";
+const MAP_HREF = "https://www.google.com/maps/place/Lomos+Pirandello/@-31.5279982,-68.5700389,17.12z/data=!4m6!3m5!1s0x968141b3a9672229:0xd1dc0f752c31c2bb!8m2!3d-31.5278743!4d-68.5689461!16s%2Fg%2F1hc2hqj13";
+---
+
+<footer style="background-color: var(--color-surface-low); border-top: 1px solid var(--color-border)">
+  <div class="section-container py-16">
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-5 mb-12">
+
+      <!-- Logo --!>
+      <div class="md:col-span-1">
+        <a href={base} aria-label="Pirandello Lomos — Inicio">
+          <img src={`${base}logo.svg`} alt="Pirandello Lomos" class="logo-img h-10 w-auto mb-5" />
+        </a>
+        <p class="text-sm leading-relaxed" style="color: var(--color-on-surface-muted)">
+          Un restaurante familiar con sabor propio.<br />
+          San Juan, Rivadavia.
+        </p>
+      </div>
+
+      <!-- Redes --!>
+      <div class="md:col-span-1">
+        <h3 class="footer-heading">Seguinos</h3>
+        <div class="flex flex-col gap-4">
+          <a href="https://www.instagram.com/pirandellolomos/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+            <span class="social-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </span>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/lomos.pirandello" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+            <span class="social-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </span>
+            <span>Facebook</span>
+          </a>
+          <a href="https://menu.fu.do/pirandellolomos/qr-menu" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Menú digital">
+            <span class="social-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </span>
+            <span>Menú digital</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contacto --!>
+      <div class="md:col-span-1">  
+        <h3 class="footer-heading">Contacto</h3>
+        <div class="flex flex-col md:flex-row gap-6 items-start">
+          <ul class="space-y-4">
+            <li class="contact-row">
+              <span class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </span>
+              <span class="contact-text">Av. Lib. San Martín O 3105<br />J5400 Rivadavia, San Juan</span>
+            </li>
+            <li class="contact-row">
+              <span class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.33 2 2 0 0 1 3.6 1.3h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </span>
+              <span class="contact-text">4262725 · 4260260</span>
+            </li>
+          </ul>
+        </div> 
+      </div>
+
+      <!-- Mapa --!>
+      <div class="md:col-span-2">
+        <div class="map-box fade-in">
+            <iframe
+              src={MAP_SRC}
+              title="Ubicación de Pirandello Lomos en Rivadavia, San Juan"
+              loading="lazy"
+              class="map-iframe"
+            ></iframe>
+            <a href={MAP_HREF} target="_blank" rel="noopener noreferrer" class="map-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              Abrir en Maps
+            </a>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="mt-10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4" style="border-top: 1px solid var(--color-border)">
+      <p class="text-xs" style="color: var(--color-on-surface-muted)">
+        © {year} Pirandello Lomos. Todos los derechos reservados.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  .logo-img {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+  }
+
+  .footer-heading {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-primary);
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+  }
+
+  .footer-link {
+    color: var(--color-on-surface-muted);
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  .footer-link:hover { color: var(--color-primary); }
+
+  .contact-row { display: flex; align-items: flex-start; gap: 0.75rem; }
+  .contact-icon { flex-shrink: 0; color: var(--color-primary); margin-top: 0.15rem; }
+  .contact-text { font-size: 0.875rem; color: var(--color-on-surface-muted); line-height: 1.6; }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+    color: var(--color-on-surface-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .social-link:hover { color: var(--color-primary); }
+  .social-icon { flex-shrink: 0; color: var(--color-primary); }
+
+  /* MAP BOX */
+  .map-box {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .map-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    filter: grayscale(0.5) brightness(0.75) contrast(1.1);
+    transition: filter 0.4s ease;
+  }
+
+  .map-box:hover .map-iframe {
+    filter: grayscale(0.1) brightness(0.9) contrast(1);
+  }
+
+  .map-btn {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.4rem 0.75rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  .map-btn:hover { background-color: var(--color-primary-dark); }
+</style>
