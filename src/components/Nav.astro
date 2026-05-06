@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL.replace(/\/?$/, '');
+const base = import.meta.env.BASE_URL;
 
 const navLinks = [
   { href: '#menu', label: 'Menú' },
@@ -11,8 +11,8 @@ const navLinks = [
 <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
   <nav class="flex items-center justify-between px-4 sm:px-8 py-4 w-full max-w-screen-xl mx-auto">
 
-    <a href={`${base}/`} aria-label="Pirandello Lomos — Inicio" class="flex-shrink-0">
-      <img src={`${base}/logo.svg`} alt="Pirandello Lomos" class="logo-img w-auto" />
+    <a href={`${base}`} aria-label="Pirandello Lomos — Inicio" class="flex-shrink-0">
+      <img src={`${base}logo.svg`} alt="Pirandello Lomos" class="logo-img w-auto" />
     </a>
 
     <ul class="hidden md:flex gap-6 lg:gap-10">

@@ -1,6 +1,6 @@
 ---
 import { menuItems } from '../data/menu';
-const base = import.meta.env.BASE_URL.replace(/\/?$/, '');
+const base = import.meta.env.BASE_URL;
 ---
 
 <section id="menu" class="py-24" style="background-color: var(--color-surface-low)">
@@ -20,7 +20,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '');
           <article class={`menu-card group fade-in${i % 2 === 1 ? ' menu-card--offset' : ''}`}>
             <div class="menu-img-wrap">
               <img
-                src={`${base}/${item.imagen}`}
+                src={`${base}${item.imagen}`}
                 alt={item.nombre}
                 loading="lazy"
                 width="400"

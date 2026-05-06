@@ -110,11 +110,6 @@ const WA_BASE = `https://wa.me/${WA_NUMBER}`;
   const btn = document.getElementById('submit-btn');
   const status = document.getElementById('form-status');
 
-  if (!form.checkValidity()) {
-  form.reportValidity();
-  return;
-  }
-
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = new FormData(form);
@@ -130,7 +125,7 @@ const WA_BASE = `https://wa.me/${WA_NUMBER}`;
     const mensaje  = data.get('mensaje')?.toString().trim() ?? '';
 
     const texto = [
-      `Hola! Quiero hacer una reserva a nombre de ${nombre} ${apellido} para el día ${fecha}, somos ${personas} `,
+      `Hola! Quiero hacer una reserva a nombre de ${nombre} ${apellido} para el día ${fecha}, somos ${personas} personas`,
       mensaje ? `${mensaje}` : '',
     ].filter(Boolean).join('\n');
 
