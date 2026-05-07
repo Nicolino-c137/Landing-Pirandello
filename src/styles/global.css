@@ -41,7 +41,7 @@ img, video {
 
 /* ==== OTROS ==== */
 .logo-img {
-    margin-left: 1rem;
+    margin-left: 2rem;
     margin-top: 0.2rem;
     filter: brightness(0) invert(1);
     height: 75px;
